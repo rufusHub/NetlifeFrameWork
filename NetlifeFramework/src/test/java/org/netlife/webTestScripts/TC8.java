@@ -20,7 +20,7 @@ public class TC8 extends Base{
 
 	@Test(groups = {"web"})
 	public void TC8_definition() throws InterruptedException, IOException {
-		// inicialPopupPage: This test case selects CLOSE to the initial Popup.
+		// inicialPopupPage: This test case selects ACEPTAR to the initial Popup.
 		
 		String expectedTxt = "No popup found";
 		String pathPicture = "/home/rufo/logs/netlifeWebAutomated/TC8.jpg";

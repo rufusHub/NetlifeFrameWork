@@ -7,6 +7,7 @@ import org.netlife.assertions.Assertion;
 import org.netlife.utilities.reportCapture;
 import org.netlife.utilities.screenshotCapture;
 import org.netlife.webPages.loginPage;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -14,10 +15,10 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class TC1 extends Base{
 
-	@Test(groups = {"web"})
-	public void TC1_definition() throws InterruptedException, IOException {
+	@Test(groups = {"web"}, dataProvider = "dp1")
+	public void TC1_definition(String s1, String s2) throws InterruptedException, IOException {
 		
-		// loginPage: This test case login with a specific account.		
+		// loginPage: This test case login with two accounts(runs twice).	
 		
 		String expectedUrl = "https://web-stag.hispasatprod.opentv.com/discover";
 		String pathPicture = "/home/rufo/logs/netlifeWebAutomated/TC1.jpg";
@@ -27,7 +28,7 @@ public class TC1 extends Base{
 		ExtentTest tc1 = rep.startTest(className);
 		
 		loginPage login = new loginPage(driver_chrome, webproperties);
-		login.signIn(username, passwd);
+		login.signIn(s1, s2);
 		Thread.sleep(5000);
 		
 		Boolean result = Assertion.assertion_1(driver_chrome.getCurrentUrl(), expectedUrl, className);
@@ -40,9 +41,16 @@ public class TC1 extends Base{
 		screenshotCapture.takeScreenshot(driver_chrome, pathPicture);
 		rep.endTest(tc1);
 		rep.flush();
-		
-		
-		
+	}
+	
+	@DataProvider
+	public Object[][] dp1(){
+		Object[][] ob = new Object[2][2];
+		ob[0][0] = "NC1";
+		ob[0][1] = "123";
+		ob[1][0] = "NS1";
+		ob[1][1] = "123";
+		return ob;
 	}
 	
 }
