@@ -21,7 +21,7 @@ public class TC2 extends Base{
 		// loginPage: This test case clicks on "¿Olvidó usuario o contraseña?" and verifies proper url is opened.	
 		
 		String expectedUrl = "https://extranet.telconet.ec/reiniciarContrasenia/changePasswordNetlifePlay";
-		String pathPicture = "/home/rufo/logs/netlifeWebAutomated/TC2.jpg";
+		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\WEB_demo\\TC2.jpg";
 		String className = "TC2";
 		
 		ExtentReports rep = reportCapture.handleReport();
@@ -29,7 +29,7 @@ public class TC2 extends Base{
 		
 		loginPage login = new loginPage(driver_chrome, webproperties);
 		login.forgotten();
-		Thread.sleep(4000);
+		Thread.sleep(1000);
 		
 		Boolean result = Assertion.assertion_1(driver_chrome.getCurrentUrl(), expectedUrl, className);
 		if (result) {

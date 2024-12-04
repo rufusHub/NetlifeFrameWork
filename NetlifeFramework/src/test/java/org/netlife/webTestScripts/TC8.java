@@ -23,7 +23,7 @@ public class TC8 extends Base{
 		// inicialPopupPage: This test case selects ACEPTAR to the initial Popup.
 		
 		String expectedTxt = "No popup found";
-		String pathPicture = "/home/rufo/logs/netlifeWebAutomated/TC8.jpg";
+		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\WEB_demo\\TC8.jpg";
 		String className = "TC8";
 		
 		ExtentReports rep = reportCapture.handleReport();
@@ -31,7 +31,7 @@ public class TC8 extends Base{
 		
 		loginPage login = new loginPage(driver_chrome, webproperties);
 		login.signIn(username, passwd);
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		
 		inicialPopupPage clickaccept = new inicialPopupPage(driver_chrome, webproperties);
 		clickaccept.clickAceptarTodo();

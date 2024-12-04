@@ -24,7 +24,7 @@ public class TC7 extends Base{
 		// inicialPopupPage: This test case selects CLOSE to the initial Popup.
 		
 		String expectedTxt = "No popup found";
-		String pathPicture = "/home/rufo/logs/netlifeWebAutomated/TC7.jpg";
+		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\WEB_demo\\TC7.jpg";
 		String className = "TC7";
 		
 		ExtentReports rep = reportCapture.handleReport();

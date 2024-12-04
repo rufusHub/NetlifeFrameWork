@@ -26,9 +26,9 @@ public class TC4 extends Base{
 		
 		List<String> expectedString = Arrays.asList("¿Olvidó usuario o contraseña?", 
 				                                    "Términos de servicio y Política de Cookies y Política de Privacidad.", 
-				                                    "Para conocer más de nuestro contenido ingresa a ");
+				                                    "Al iniciar sesión, aceptas nuestros ");
 		
-		String pathPicture = "/home/rufo/logs/netlifeWebAutomated/TC4.jpg";
+		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\WEB_demo\\TC4.jpg";
 		String className = "TC4";
 		
 		ExtentReports rep = reportCapture.handleReport();
@@ -40,13 +40,15 @@ public class TC4 extends Base{
 		Integer c = 0;
  
 		for (String i : st) {
+			String mesg = expectedString.get(c) + " -> is Expected; It is Receiving -> " + i ;
 			if (i.equals(expectedString.get(c))) {
-				System.out.println(c.toString() + " -> OK");
+				System.out.println(i + " -> OK");
+				tc4.log(LogStatus.PASS, mesg );
 			}
 			else {
-				System.out.println(c.toString() + " -> FAIL");
+				System.out.println(i + " -> FAIL");
+				tc4.log(LogStatus.FAIL, mesg );
 				this.result = false;
-				break;
 			}
 			c++;
 		}
@@ -61,12 +63,5 @@ public class TC4 extends Base{
 		screenshotCapture.takeScreenshot(driver_chrome, pathPicture);
 		rep.endTest(tc4);
 		rep.flush();
-		
-		
-		
-		
-		
-		
-		
 	}
 }

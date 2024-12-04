@@ -52,7 +52,7 @@ public class Base {
 		// Launch browser, URL and maximize.
 		driver_chrome = new ChromeDriver();
 		driver_chrome.get(this.url);
-		driver_chrome.manage().window().maximize();
+		//driver_chrome.manage().window().maximize();
 		
 		// Start Actions
 		action_chrome = new Actions(driver_chrome);
@@ -61,7 +61,7 @@ public class Base {
 	
 	@AfterMethod(alwaysRun = true, groups = {"web"})
 	public void BrowserClose() throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		driver_chrome.quit();
 	}
 	

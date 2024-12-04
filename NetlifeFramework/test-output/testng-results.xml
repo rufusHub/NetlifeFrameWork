@@ -1,20 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-09T01:10:32Z" name="Default suite" finished-at="2024-07-09T01:11:13Z" duration-ms="41035">
+  <suite started-at="2024-12-04T22:32:35Z" name="Suite" finished-at="2024-12-04T22:34:23Z" duration-ms="108639">
     <groups>
       <group name="web">
-        <method signature="TC1.TC1_definition(java.lang.String, java.lang.String)[pri:0, instance:org.netlife.webTestScripts.TC1@5f354bcf]" name="TC1_definition" class="org.netlife.webTestScripts.TC1"/>
+        <method signature="TC1.TC1_definition(java.lang.String, java.lang.String)[pri:0, instance:org.netlife.webTestScripts.TC1@46292372]" name="TC1_definition" class="org.netlife.webTestScripts.TC1"/>
+        <method signature="TC11.TC11_definition()[pri:0, instance:org.netlife.webTestScripts.TC11@5c371e13]" name="TC11_definition" class="org.netlife.webTestScripts.TC11"/>
+        <method signature="TC2.TC2_definition()[pri:0, instance:org.netlife.webTestScripts.TC2@126be319]" name="TC2_definition" class="org.netlife.webTestScripts.TC2"/>
+        <method signature="TC8.TC8_definition()[pri:0, instance:org.netlife.webTestScripts.TC8@6c44052e]" name="TC8_definition" class="org.netlife.webTestScripts.TC8"/>
       </group> <!-- web -->
     </groups>
-    <test started-at="2024-07-09T01:10:32Z" name="Default test" finished-at="2024-07-09T01:11:13Z" duration-ms="41035">
-      <class name="org.netlife.webTestScripts.TC1">
-        <test-method is-config="true" signature="BrowserLaunch()[pri:0, instance:org.netlife.webTestScripts.TC1@5f354bcf]" started-at="2024-07-08T20:10:32Z" name="BrowserLaunch" finished-at="2024-07-08T20:10:36Z" duration-ms="3781" status="PASS">
+    <test started-at="2024-12-04T22:32:35Z" name="Command line test bf049685-9104-488b-ad50-9e29ca44ea9f" finished-at="2024-12-04T22:34:23Z" duration-ms="108639">
+      <class name="org.netlife.webTestScripts.TC11">
+        <test-method is-config="true" signature="BrowserLaunch()[pri:0, instance:org.netlife.webTestScripts.TC11@5c371e13]" started-at="2024-12-04T17:33:56Z" name="BrowserLaunch" finished-at="2024-12-04T17:33:59Z" duration-ms="2925" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserLaunch -->
-        <test-method signature="TC1_definition(java.lang.String, java.lang.String)[pri:0, instance:org.netlife.webTestScripts.TC1@5f354bcf]" started-at="2024-07-08T20:10:36Z" name="TC1_definition" data-provider="dp1" finished-at="2024-07-08T20:10:51Z" duration-ms="14746" status="PASS">
+        <test-method signature="TC11_definition()[pri:0, instance:org.netlife.webTestScripts.TC11@5c371e13]" started-at="2024-12-04T17:33:59Z" name="TC11_definition" finished-at="2024-12-04T17:34:21Z" duration-ms="21970" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC11_definition -->
+        <test-method is-config="true" signature="BrowserClose()[pri:0, instance:org.netlife.webTestScripts.TC11@5c371e13]" started-at="2024-12-04T17:34:21Z" name="BrowserClose" finished-at="2024-12-04T17:34:23Z" duration-ms="2325" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserClose -->
+      </class> <!-- org.netlife.webTestScripts.TC11 -->
+      <class name="org.netlife.webTestScripts.TC8">
+        <test-method is-config="true" signature="BrowserLaunch()[pri:0, instance:org.netlife.webTestScripts.TC8@6c44052e]" started-at="2024-12-04T17:33:31Z" name="BrowserLaunch" finished-at="2024-12-04T17:33:34Z" duration-ms="3135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserLaunch -->
+        <test-method signature="TC8_definition()[pri:0, instance:org.netlife.webTestScripts.TC8@6c44052e]" started-at="2024-12-04T17:33:34Z" name="TC8_definition" finished-at="2024-12-04T17:33:54Z" duration-ms="19765" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC8_definition -->
+        <test-method is-config="true" signature="BrowserClose()[pri:0, instance:org.netlife.webTestScripts.TC8@6c44052e]" started-at="2024-12-04T17:33:54Z" name="BrowserClose" finished-at="2024-12-04T17:33:56Z" duration-ms="2368" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserClose -->
+      </class> <!-- org.netlife.webTestScripts.TC8 -->
+      <class name="org.netlife.webTestScripts.TC2">
+        <test-method is-config="true" signature="BrowserLaunch()[pri:0, instance:org.netlife.webTestScripts.TC2@126be319]" started-at="2024-12-04T17:33:09Z" name="BrowserLaunch" finished-at="2024-12-04T17:33:14Z" duration-ms="4247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserLaunch -->
+        <test-method signature="TC2_definition()[pri:0, instance:org.netlife.webTestScripts.TC2@126be319]" started-at="2024-12-04T17:33:14Z" name="TC2_definition" finished-at="2024-12-04T17:33:28Z" duration-ms="14826" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC2_definition -->
+        <test-method is-config="true" signature="BrowserClose()[pri:0, instance:org.netlife.webTestScripts.TC2@126be319]" started-at="2024-12-04T17:33:28Z" name="BrowserClose" finished-at="2024-12-04T17:33:31Z" duration-ms="2316" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserClose -->
+      </class> <!-- org.netlife.webTestScripts.TC2 -->
+      <class name="org.netlife.webTestScripts.TC1">
+        <test-method is-config="true" signature="BrowserLaunch()[pri:0, instance:org.netlife.webTestScripts.TC1@46292372]" started-at="2024-12-04T17:32:35Z" name="BrowserLaunch" finished-at="2024-12-04T17:32:38Z" duration-ms="3832" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserLaunch -->
+        <test-method signature="TC1_definition(java.lang.String, java.lang.String)[pri:0, instance:org.netlife.webTestScripts.TC1@46292372]" started-at="2024-12-04T17:32:38Z" name="TC1_definition" data-provider="dp1" finished-at="2024-12-04T17:32:49Z" duration-ms="10077" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -30,15 +75,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC1_definition -->
-        <test-method is-config="true" signature="BrowserClose()[pri:0, instance:org.netlife.webTestScripts.TC1@5f354bcf]" started-at="2024-07-08T20:10:51Z" name="BrowserClose" finished-at="2024-07-08T20:10:54Z" duration-ms="3136" status="PASS">
+        <test-method is-config="true" signature="BrowserClose()[pri:0, instance:org.netlife.webTestScripts.TC1@46292372]" started-at="2024-12-04T17:32:49Z" name="BrowserClose" finished-at="2024-12-04T17:32:51Z" duration-ms="2807" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserClose -->
-        <test-method is-config="true" signature="BrowserLaunch()[pri:0, instance:org.netlife.webTestScripts.TC1@5f354bcf]" started-at="2024-07-08T20:10:54Z" name="BrowserLaunch" finished-at="2024-07-08T20:10:56Z" duration-ms="2203" status="PASS">
+        <test-method is-config="true" signature="BrowserLaunch()[pri:0, instance:org.netlife.webTestScripts.TC1@46292372]" started-at="2024-12-04T17:32:51Z" name="BrowserLaunch" finished-at="2024-12-04T17:32:56Z" duration-ms="4771" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserLaunch -->
-        <test-method signature="TC1_definition(java.lang.String, java.lang.String)[pri:0, instance:org.netlife.webTestScripts.TC1@5f354bcf]" started-at="2024-07-08T20:10:56Z" name="TC1_definition" data-provider="dp1" finished-at="2024-07-08T20:11:10Z" duration-ms="13979" status="PASS">
+        <test-method signature="TC1_definition(java.lang.String, java.lang.String)[pri:0, instance:org.netlife.webTestScripts.TC1@46292372]" started-at="2024-12-04T17:32:56Z" name="TC1_definition" data-provider="dp1" finished-at="2024-12-04T17:33:07Z" duration-ms="10760" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -54,11 +99,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC1_definition -->
-        <test-method is-config="true" signature="BrowserClose()[pri:0, instance:org.netlife.webTestScripts.TC1@5f354bcf]" started-at="2024-07-08T20:11:10Z" name="BrowserClose" finished-at="2024-07-08T20:11:13Z" duration-ms="3145" status="PASS">
+        <test-method is-config="true" signature="BrowserClose()[pri:0, instance:org.netlife.webTestScripts.TC1@46292372]" started-at="2024-12-04T17:33:07Z" name="BrowserClose" finished-at="2024-12-04T17:33:09Z" duration-ms="2499" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BrowserClose -->
       </class> <!-- org.netlife.webTestScripts.TC1 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Command line test bf049685-9104-488b-ad50-9e29ca44ea9f -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -21,7 +21,7 @@ public class TC3 extends Base{
 		// 	loginPage: This test case clicks on "Términos de servicio y Política de Cookies y Política de Privacidad." and verifies proper url is opened.	
 		
 		String expectedUrl = "https://www.netlife.ec/netlife-play-tyc/";
-		String pathPicture = "/home/rufo/logs/netlifeWebAutomated/TC3.jpg";
+		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\WEB_demo\\TC3.jpg";
 		String className = "TC3";
 		
 		ExtentReports rep = reportCapture.handleReport();
@@ -30,7 +30,7 @@ public class TC3 extends Base{
 		
 		loginPage login = new loginPage(driver_chrome, webproperties);
 		login.termandcond();
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		
 		Boolean result = Assertion.assertion_1(driver_chrome.getCurrentUrl(), expectedUrl, className);
 		if (result) {

@@ -21,7 +21,7 @@ public class TC1 extends Base{
 		// loginPage: This test case login with two accounts(runs twice).	
 		
 		String expectedUrl = "https://web-stag.hispasatprod.opentv.com/discover";
-		String pathPicture = "/home/rufo/logs/netlifeWebAutomated/TC1.jpg";
+		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\WEB_demo\\TC1.jpg";
 		String className = "TC1";
 		
 		ExtentReports rep = reportCapture.handleReport();
@@ -29,7 +29,7 @@ public class TC1 extends Base{
 		
 		loginPage login = new loginPage(driver_chrome, webproperties);
 		login.signIn(s1, s2);
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		
 		Boolean result = Assertion.assertion_1(driver_chrome.getCurrentUrl(), expectedUrl, className);
 		if (result) {

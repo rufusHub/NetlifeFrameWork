@@ -22,7 +22,7 @@ public class TC5 extends Base{
 		// inicialPopupPage: This test case takes the header of the initial Popup.
 		
 		String expectedTxt = "Es molestoso, lo sabemos, ¡pero tienes que leer esto!";
-		String pathPicture = "/home/rufo/logs/netlifeWebAutomated/TC5.jpg";
+		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\WEB_demo\\TC5.jpg";
 		String className = "TC5";
 		
 		ExtentReports rep = reportCapture.handleReport();
@@ -30,7 +30,7 @@ public class TC5 extends Base{
 		
 		loginPage login = new loginPage(driver_chrome, webproperties);
 		login.signIn(username, passwd);
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		
 		inicialPopupPage pop = new inicialPopupPage(driver_chrome, webproperties);
 		String txt = pop.getPopupHeader();

@@ -21,7 +21,7 @@ public class TC6 extends Base{
 		// loginPage: This test case try to login with WRONG account.		
 		
 		String expectedMsg = "Nombre de usuario o contraseña incorrectos. Por favor, inténtelo de nuevo.";
-		String pathPicture = "/home/rufo/logs/netlifeWebAutomated/TC6.jpg";
+		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\WEB_demo\\TC6.jpg";
 		String className = "TC6";
 		
 		ExtentReports rep = reportCapture.handleReport();
@@ -29,7 +29,7 @@ public class TC6 extends Base{
 		
 		loginPage loginPagerror = new loginPage(driver_chrome, webproperties);
 		String txt = loginPagerror.signonerror(wronguser, wrongpass);
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		
 		Boolean result = Assertion.assertion_1(txt, expectedMsg, className);
 		if (result) {
