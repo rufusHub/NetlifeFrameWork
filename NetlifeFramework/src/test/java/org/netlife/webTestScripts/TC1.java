@@ -33,10 +33,10 @@ public class TC1 extends Base{
 		
 		Boolean result = Assertion.assertion_1(driver_chrome.getCurrentUrl(), expectedUrl, className);
 		if (result) {
-			tc1.log(LogStatus.PASS, "TC1 is getting passed");
+			tc1.log(LogStatus.PASS, "TC1 - loginPage: This test case login with two accounts(runs twice). - is getting passed");
 		}
 		else {
-			tc1.log(LogStatus.FAIL, "TC1 is getting failed");
+			tc1.log(LogStatus.FAIL, "TC1 - loginPage: This test case login with two accounts(runs twice). - is getting failed");
 		}
 		screenshotCapture.takeScreenshot(driver_chrome, pathPicture);
 		rep.endTest(tc1);

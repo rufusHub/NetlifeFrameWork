@@ -21,7 +21,7 @@ public class TC5 extends Base{
 	public void TC5_definition() throws InterruptedException, IOException {
 		// inicialPopupPage: This test case takes the header of the initial Popup.
 		
-		String expectedTxt = "Es molestoso, lo sabemos, ¡pero tienes que leer esto!";
+		String expectedTxt = "Configuración de privacidad";
 		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\WEB_demo\\TC5.jpg";
 		String className = "TC5";
 		
@@ -38,10 +38,10 @@ public class TC5 extends Base{
 		
 		Boolean result = Assertion.assertion_1(txt, expectedTxt, className);
 		if (result) {
-			tc5.log(LogStatus.PASS, "TC5 is getting passed");
+			tc5.log(LogStatus.PASS, "TC5 - inicialPopupPage: This test case takes the header of the initial Popup. - is getting passed");
 		}
 		else {
-			tc5.log(LogStatus.FAIL, "TC5 is getting failed");
+			tc5.log(LogStatus.FAIL, "TC5 - inicialPopupPage: This test case takes the header of the initial Popup. - is getting failed");
 		}
 		screenshotCapture.takeScreenshot(driver_chrome, pathPicture);
 		rep.endTest(tc5);

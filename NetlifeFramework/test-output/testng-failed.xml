@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test name="Default test(failed)">
+<suite name="Failed suite [Suite]">
+  <test name="Command line test 0a96987e-2d73-406f-836e-a111d4e6f76b(failed)">
     <classes>
-      <class name="org.netlife.webTestScripts.TC10">
+      <class name="org.netlife.webTestScripts.TC2">
         <methods>
           <include name="BrowserClose"/>
-          <include name="TC10_definition"/>
+          <include name="BrowserLaunch"/>
+          <include name="TC2_definition"/>
+        </methods>
+      </class> <!-- org.netlife.webTestScripts.TC2 -->
+      <class name="org.netlife.webTestScripts.TC8">
+        <methods>
+          <include name="BrowserClose"/>
           <include name="BrowserLaunch"/>
         </methods>
-      </class> <!-- org.netlife.webTestScripts.TC10 -->
+      </class> <!-- org.netlife.webTestScripts.TC8 -->
+      <class name="org.netlife.webTestScripts.TC11">
+        <methods>
+          <include name="BrowserClose"/>
+          <include name="BrowserLaunch"/>
+        </methods>
+      </class> <!-- org.netlife.webTestScripts.TC11 -->
+      <class name="org.netlife.webTestScripts.TC1">
+        <methods>
+          <include name="BrowserClose"/>
+          <include name="BrowserLaunch"/>
+        </methods>
+      </class> <!-- org.netlife.webTestScripts.TC1 -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Command line test 0a96987e-2d73-406f-836e-a111d4e6f76b(failed) -->
+</suite> <!-- Failed suite [Suite] -->

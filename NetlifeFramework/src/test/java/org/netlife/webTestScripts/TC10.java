@@ -27,7 +27,7 @@ public class TC10 extends Base{
 
 		// settingsPage: This case takes Acerca del Dispositivo data and compares with expected data.
 		
-		List<String> expectedString = Arrays.asList("Versión actual","24.30.032","Versión principal","24.30.031");
+		List<String> expectedString = Arrays.asList("Versión actual","24.30.030","Versión principal","24.30.030");
 		
 		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\WEB_demo\\TC10.jpg";
 		String className = "TC10";
@@ -72,10 +72,10 @@ public class TC10 extends Base{
 		
 		Assertion.assertion_2(result, className);
 		if (result) {
-			tc10.log(LogStatus.PASS, "TC10 is getting passed");
+			tc10.log(LogStatus.PASS, "TC10 - settingsPage: This case takes Acerca del Dispositivo data and compares with expected data. - is getting passed");
 		}
 		else {
-			tc10.log(LogStatus.FAIL, "TC10 is getting failed");
+			tc10.log(LogStatus.FAIL, "TC10 - settingsPage: This case takes Acerca del Dispositivo data and compares with expected data. - is getting failed");
 		}
 		
 		screenshotCapture.takeScreenshot(driver_chrome, pathPicture);

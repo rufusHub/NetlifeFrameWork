@@ -24,9 +24,9 @@ public class TC4 extends Base{
 		
 		// loginPage: This test case verifies some strings on Sign in menu.		
 		
-		List<String> expectedString = Arrays.asList("¿Olvidó usuario o contraseña?", 
-				                                    "Términos de servicio y Política de Cookies y Política de Privacidad.", 
-				                                    "Al iniciar sesión, aceptas nuestros ");
+		List<String> expectedString = Arrays.asList("¿Olvidó usuario o contraseNa?", 
+				                                    "Términos de servicio y Política de privacidad.", 
+				                                    "Para conocer más de nuestro contenido ingresa a ");
 		
 		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\WEB_demo\\TC4.jpg";
 		String className = "TC4";
@@ -55,10 +55,10 @@ public class TC4 extends Base{
 		
 		Assertion.assertion_2(result, className);
 		if (result) {
-			tc4.log(LogStatus.PASS, "TC4 is getting passed");
+			tc4.log(LogStatus.PASS, "TC4 - loginPage: This test case verifies some strings on Sign in menu. - is getting passed");
 		}
 		else {
-			tc4.log(LogStatus.FAIL, "TC4 is getting failed");
+			tc4.log(LogStatus.FAIL, "TC4 - loginPage: This test case verifies some strings on Sign in menu. - is getting failed");
 		}
 		screenshotCapture.takeScreenshot(driver_chrome, pathPicture);
 		rep.endTest(tc4);

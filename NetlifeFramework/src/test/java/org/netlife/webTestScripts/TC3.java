@@ -18,7 +18,7 @@ public class TC3 extends Base{
 	@Test(groups = {"web"})
 	public void TC3_definition() throws InterruptedException, IOException {
 		
-		// 	loginPage: This test case clicks on "Términos de servicio y Política de Cookies y Política de Privacidad." and verifies proper url is opened.	
+		// 	loginPage: This test case clicks on "Términos de servicio y Política de privacidad." and verifies proper url is opened.	
 		
 		String expectedUrl = "https://www.netlife.ec/netlife-play-tyc/";
 		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\WEB_demo\\TC3.jpg";
@@ -34,10 +34,10 @@ public class TC3 extends Base{
 		
 		Boolean result = Assertion.assertion_1(driver_chrome.getCurrentUrl(), expectedUrl, className);
 		if (result) {
-			tc3.log(LogStatus.PASS, "TC3, URL is getting passed");
+			tc3.log(LogStatus.PASS, "TC3 - loginPage: This test case clicks on \"Términos de servicio y Política de Cookies y Política de Privacidad.\" and verifies proper url is opened. - is getting passed");
 		}
 		else {
-			tc3.log(LogStatus.FAIL, "TC3, URL is getting failed");
+			tc3.log(LogStatus.FAIL, "TC3 - loginPage: This test case clicks on \"Términos de servicio y Política de Cookies y Política de Privacidad.\" and verifies proper url is opened. - is getting failed");
 		}
 		screenshotCapture.takeScreenshot(driver_chrome, pathPicture);
 		rep.endTest(tc3);

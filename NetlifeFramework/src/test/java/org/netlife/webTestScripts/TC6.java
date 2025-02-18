@@ -33,10 +33,10 @@ public class TC6 extends Base{
 		
 		Boolean result = Assertion.assertion_1(txt, expectedMsg, className);
 		if (result) {
-			tc6.log(LogStatus.PASS, "TC6 is getting passed");
+			tc6.log(LogStatus.PASS, "TC6 - loginPage: This test case try to login with WRONG account. - is getting passed");
 		}
 		else {
-			tc6.log(LogStatus.FAIL, "TC6 is getting failed");
+			tc6.log(LogStatus.FAIL, "TC6 - loginPage: This test case try to login with WRONG account. - is getting failed");
 		}
 		screenshotCapture.takeScreenshot(driver_chrome, pathPicture);
 		rep.endTest(tc6);

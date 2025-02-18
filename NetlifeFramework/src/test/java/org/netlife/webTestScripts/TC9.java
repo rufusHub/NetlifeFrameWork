@@ -26,7 +26,7 @@ public class TC9 extends Base{
 		
 		// mainMenuPage: This case takes all options in main menu and compare with expected strings.
 		
-		List<String> expectedString = Arrays.asList("INICIO","CANALES", "MIS CONTENIDOS");
+		List<String> expectedString = Arrays.asList("INICIO","GUÍA", "MIS CONTENIDOS");
 
 		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\WEB_demo\\TC9.jpg";
 		String className = "TC9";
@@ -62,10 +62,10 @@ public class TC9 extends Base{
 		
 		Assertion.assertion_2(result, className);
 		if (result) {
-			tc9.log(LogStatus.PASS, "TC4 is getting passed");
+			tc9.log(LogStatus.PASS, "TC9 - mainMenuPage: This case takes all options in main menu and compare with expected strings. - is getting passed");
 		}
 		else {
-			tc9.log(LogStatus.FAIL, "TC4 is getting failed");
+			tc9.log(LogStatus.FAIL, "TC9 - mainMenuPage: This case takes all options in main menu and compare with expected strings. - is getting failed");
 		}
 		screenshotCapture.takeScreenshot(driver_chrome, pathPicture);
 		rep.endTest(tc9);

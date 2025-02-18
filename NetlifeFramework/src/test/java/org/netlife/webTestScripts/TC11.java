@@ -69,10 +69,10 @@ public class TC11 extends Base{
 	
 	Assertion.assertion_2(result, className);
 	if (result) {
-		tc11.log(LogStatus.PASS, "TC11 is getting passed");
+		tc11.log(LogStatus.PASS, "TC11 - settingsPage: This case takes Control parental data and compares with expected data. - is getting passed");
 	}
 	else {
-		tc11.log(LogStatus.FAIL, "TC11 is getting failed");
+		tc11.log(LogStatus.FAIL, "TC11 - settingsPage: This case takes Control parental data and compares with expected data. - is getting failed");
 	}
 	
 	screenshotCapture.takeScreenshot(driver_chrome, pathPicture);

@@ -46,10 +46,10 @@ public class TC7 extends Base{
 		
 		Boolean result = Assertion.assertion_1(this.txt, expectedTxt, className);
 		if (result) {
-			tc7.log(LogStatus.PASS, "TC7 is getting passed");
+			tc7.log(LogStatus.PASS, "TC7 - inicialPopupPage: This test case selects CLOSE to the initial Popup. - is getting passed");
 		}
 		else {
-			tc7.log(LogStatus.FAIL, "TC7 is getting failed");
+			tc7.log(LogStatus.FAIL, "TC7 - inicialPopupPage: This test case selects CLOSE to the initial Popup. - is getting failed");
 		}
 		screenshotCapture.takeScreenshot(driver_chrome, pathPicture);
 		rep.endTest(tc7);

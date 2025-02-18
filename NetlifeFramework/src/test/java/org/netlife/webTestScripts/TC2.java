@@ -33,10 +33,10 @@ public class TC2 extends Base{
 		
 		Boolean result = Assertion.assertion_1(driver_chrome.getCurrentUrl(), expectedUrl, className);
 		if (result) {
-			tc2.log(LogStatus.PASS, "TC2, URL is getting passed");
+			tc2.log(LogStatus.PASS, "TC2 - loginPage: This test case clicks on \"¿Olvidó usuario o contraseña?\" and verifies proper url is opened. - is getting passed");
 		}
 		else {
-			tc2.log(LogStatus.FAIL, "TC2, URL is getting failed");
+			tc2.log(LogStatus.FAIL, "TC2 - loginPage: This test case clicks on \\\"¿Olvidó usuario o contraseña?\\\" and verifies proper url is opened. - is getting failed");
 		}
 		screenshotCapture.takeScreenshot(driver_chrome, pathPicture);
 		rep.endTest(tc2);

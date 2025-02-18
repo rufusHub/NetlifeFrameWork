@@ -45,10 +45,10 @@ public class TC8 extends Base{
 		
 		Boolean result = Assertion.assertion_1(this.txt, expectedTxt, className);
 		if (result) {
-			tc8.log(LogStatus.PASS, "TC8 is getting passed");
+			tc8.log(LogStatus.PASS, "TC8 - inicialPopupPage: This test case selects ACEPTAR to the initial Popup. - is getting passed");
 		}
 		else {
-			tc8.log(LogStatus.FAIL, "TC8 is getting failed");
+			tc8.log(LogStatus.FAIL, "TC8 - inicialPopupPage: This test case selects ACEPTAR to the initial Popup. - is getting failed");
 		}
 		screenshotCapture.takeScreenshot(driver_chrome, pathPicture);
 		rep.endTest(tc8);
