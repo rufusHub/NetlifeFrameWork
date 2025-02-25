@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="org.netlife.webTestScripts.TC10">
+      <class name="org.netlife.mobTestScripts.LoginPageTestCases">
         <methods>
-          <include name="BrowserClose"/>
-          <include name="TC10_definition"/>
-          <include name="BrowserLaunch"/>
+          <include name="appLaunch"/>
+          <include name="appClose"/>
+          <include name="selecIdioma"/>
         </methods>
-      </class> <!-- org.netlife.webTestScripts.TC10 -->
+      </class> <!-- org.netlife.mobTestScripts.LoginPageTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
