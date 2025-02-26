@@ -1,23 +1,15 @@
 package org.netlife.mobTestScripts;
 
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
-
 import org.netlife.Base.Base;
-import org.netlife.assertions.Assertion;
 import org.netlife.mobPages.loginPage;
 import org.netlife.utilities.ElementUtils;
 import org.netlife.utilities.reportCapture;
 import org.netlife.utilities.screenshotCapture;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.ExtentReports;
@@ -29,13 +21,13 @@ public class LoginPageTestCases extends Base{
 	@Test(groups = {"mobile"})
 	public void getText() throws IOException {
 		
-		// LoginPage: This test case verifies some strings on Sign in menu.	
+		// LoginPage: This test case verifies some strings in "Sign in" menu.	
 		
-		Boolean result = true;
-		String testCaseName = "Loginscreen_getText";
+//		Boolean result = true;
+		String testCaseName = "LoginMenu__Login_Screen_strings";
 		
 		String list = mobileproperties.getProperty("list_string_login");
-		String[] expectedString = list.split(",");
+		String[] expectedString = list.split(";");
 													
 		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\MOB_demo\\"+testCaseName+".jpg";
 		
@@ -62,7 +54,7 @@ public class LoginPageTestCases extends Base{
 			else {
 				System.out.println(i + " -> FAIL");
 				tc1.log(LogStatus.FAIL, mesg );
-				result = false;
+//				result = false;
 			}
 			c++;
 		}
@@ -82,7 +74,7 @@ public class LoginPageTestCases extends Base{
 		
 		//  LoginPage: This test case login with correct account.
 	
-		String testCaseName = "Loginscreen_loginSuccess";
+		String testCaseName = "LoginMenu__Valid_account";
 		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\MOB_demo\\"+testCaseName+".jpg";
 		
 		ExtentReports rep = reportCapture.handleReportMob();
@@ -98,10 +90,10 @@ public class LoginPageTestCases extends Base{
 		
 		if (con != null) {
 		    System.out.println("Element found and visible.");
-		    tc1.log(LogStatus.PASS, "Loginscreen_login - LoginPage: This test case login with correct account - PASSED");
+		    tc1.log(LogStatus.PASS, "This test case login with CORRECT account - PASS");
 		} else {
 		    System.out.println("Element not found within 20 seconds.");
-		    tc1.log(LogStatus.FAIL, "Loginscreen_login - LoginPage: This test case login with correct account - FAILED");
+		    tc1.log(LogStatus.FAIL, "This test case login with CORRECT account - FAIL");
 		}
 
 		screenshotCapture.takeScreenshotMob(driver_android, pathPicture);
@@ -116,7 +108,7 @@ public class LoginPageTestCases extends Base{
 		
 		// LoginPage: This test login with Incorrect account.
 		
-		String testCaseName = "Loginscreen_loginError";
+		String testCaseName = "LoginMenu__Invalid_account";
 
 		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\MOB_demo\\"+testCaseName+".jpg";
 		
@@ -130,14 +122,15 @@ public class LoginPageTestCases extends Base{
 		
 		Duration timeout = Duration.ofSeconds(5);
 		WebElement con = ElementUtils.waitForElement(driver_android, timeout, driver -> login.sign_error());
-				
+		
 		if(con != null) {
 			System.out.println("Element found and visible.");
-			tc1.log(LogStatus.PASS, "Loginscreen_loginError - LoginPage: This test login with Incorrect account. - PASSED");
+			String msg_ok = "[Expected] :: " + con.getText() + " - PASS";
+			tc1.log(LogStatus.PASS, msg_ok);
 		}
 		else {
 			System.out.println("Element not found within 20 seconds.");
-			tc1.log(LogStatus.FAIL, "Loginscreen_loginError - LoginPage: This test login with Incorrect account. - FAILED");
+			tc1.log(LogStatus.FAIL, "This test case tries to login with INCORRECT account. - FAIL");
 		}
 		
 		screenshotCapture.takeScreenshotMob(driver_android, pathPicture);
@@ -151,7 +144,7 @@ public class LoginPageTestCases extends Base{
 		
 		// LoginPage: This test clicks on "Olvidó Contraseña" and selects "OK".
 		
-		String testCaseName = "Loginscreen_forgetPass";
+		String testCaseName = "LoginMenu__Forget_Password";
 
 		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\MOB_demo\\"+testCaseName+".jpg";
 		
@@ -167,11 +160,11 @@ public class LoginPageTestCases extends Base{
 		
 		if(con_1 != null && con_2 != null) {
 			System.out.println("Elements found and visible.");
-			tc1.log(LogStatus.PASS, "Loginscreen_forgetPass - LoginPage: This test clicking Olvidó Contraseña. - PASSED");
+			tc1.log(LogStatus.PASS, "This test clicks 'Olvidó Contraseña'. - PASS");
 		}
 		else {
 			System.out.println("Element not found within 5 seconds.");
-			tc1.log(LogStatus.FAIL, "Loginscreen_forgetPass - LoginPage: This test clicking Olvidó Contraseña. - FAILED");
+			tc1.log(LogStatus.FAIL, "This test clicks 'Olvidó Contraseña'. - FAIL");
 		}
 		
 		screenshotCapture.takeScreenshotMob(driver_android, pathPicture);
@@ -182,11 +175,11 @@ public class LoginPageTestCases extends Base{
 		
 		if(con_3 != false) {
 			System.out.println("Elements found and visible.");
-			tc1.log(LogStatus.PASS, "Loginscreen_forgetPass - LoginPage: Press OK in Olvidó Contraseña menu. - PASSED");
+			tc1.log(LogStatus.PASS, "Press 'OK' in 'Olvidó Contraseña' menu. - PASS");
 		}
 		else {
 			System.out.println("Element not found within 5 seconds.");
-			tc1.log(LogStatus.FAIL, "Loginscreen_forgetPass - LoginPage: Press OK in Olvidó Contraseña menu. - FAILED");
+			tc1.log(LogStatus.FAIL, "Press 'OK' in 'Olvidó Contraseña' menu. - FAIL");
 		}
 		
 		rep.endTest(tc1);
@@ -199,56 +192,55 @@ public class LoginPageTestCases extends Base{
 	
 		// LoginPage: This test clicks on "Términos y Políticas" and selects "OK".
 		
-				String testCaseName = "Loginscreen_termPoliticas";
+		String testCaseName = "LoginMenu__Terminos_Politicas";
 
-				String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\MOB_demo\\"+testCaseName+".jpg";
-				
-				ExtentReports rep = reportCapture.handleReportMob();
-				ExtentTest tc1 = rep.startTest(testCaseName);
-				
-				loginPage login = new loginPage(driver_android, mobileproperties);
-				login.terminos_politicas().click();
-				
-				Duration timeout = Duration.ofSeconds(10);
-				WebElement con_2 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.term_politica__msg_2());
-				WebElement con_3 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.term_politica_msg_1());
-				WebElement con_1 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.term_politica_ok());
-				
-				if(con_2 != null && con_3 != null && con_1 != null ) {
-					System.out.println("Elements found and visible.");
-					tc1.log(LogStatus.PASS, "Loginscreen_termPoliticas - LoginPage: This test clicking Términos y Políticas. - PASSED");
-				}
-				else {
-					System.out.println("Element not found within 5 seconds.");
-					tc1.log(LogStatus.FAIL, "Loginscreen_termPoliticas - LoginPage:  This test clicking Términos y Políticas - FAILED");
-				}
-				
-				screenshotCapture.takeScreenshotMob(driver_android, pathPicture);
-				
-				con_1.click();
-				
-				Boolean con_4 = login.inicio_sesion().isDisplayed();
-				
-				if(con_4 != false) {
-					System.out.println("Elements found and visible.");
-					tc1.log(LogStatus.PASS, "Loginscreen_termPoliticas - LoginPage: Press OK in Términos y Políticas menu. - PASSED");
-				}
-				else {
-					System.out.println("Element not found within 5 seconds.");
-					tc1.log(LogStatus.FAIL, "Loginscreen_termPoliticas - LoginPage: Press OK in Términos y Políticas menu. - FAILED");
-				}
-				
-				rep.endTest(tc1);
-				rep.flush();
+		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\MOB_demo\\"+testCaseName+".jpg";
+		
+		ExtentReports rep = reportCapture.handleReportMob();
+		ExtentTest tc1 = rep.startTest(testCaseName);
+		
+		loginPage login = new loginPage(driver_android, mobileproperties);
+		login.terminos_politicas().click();
+		
+		Duration timeout = Duration.ofSeconds(10);
+		WebElement con_2 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.term_politica__msg_2());
+		WebElement con_3 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.term_politica_msg_1());
+		WebElement con_1 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.term_politica_ok());
+		
+		if(con_2 != null && con_3 != null && con_1 != null ) {
+			System.out.println("Elements found and visible.");
+			tc1.log(LogStatus.PASS, "This test clicks 'Términos y Políticas.' - PASS");
+		}
+		else {
+			System.out.println("Element not found within 5 seconds.");
+			tc1.log(LogStatus.FAIL, "This test clicks 'Términos y Políticas.' - FAIL");
+		}
+		
+		screenshotCapture.takeScreenshotMob(driver_android, pathPicture);
+		
+		con_1.click();
+		
+		Boolean con_4 = login.inicio_sesion().isDisplayed();
+		
+		if(con_4 != false) {
+			System.out.println("Elements found and visible.");
+			tc1.log(LogStatus.PASS, "Press 'OK' in 'Términos y Políticas' menu. - PASS");
+		}
+		else {
+			System.out.println("Element not found within 5 seconds.");
+			tc1.log(LogStatus.FAIL, "Press 'OK' in 'Términos y Políticas' menu. - FAIL");
+		}
+		
+		rep.endTest(tc1);
+		rep.flush();
 	}
 	
 	@Test(groups = {"mobile"})
 	public void selecIdioma() throws IOException {
 		
-		//  LoginPage: This test case verifies some strings on Idioma menu.
+		//  LoginPage: This test case verifies some strings in "Idioma menu" and "Español" is selected by default.
 		
-		Boolean result = true;
-		String testCaseName = "Loginscreen_selectLanguage";
+		String testCaseName = "LoginMenu__Language";
 		String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\MOB_demo\\"+testCaseName+".jpg";
 		
 		ExtentReports rep = reportCapture.handleReportMob();
@@ -260,18 +252,13 @@ public class LoginPageTestCases extends Base{
 		loginPage login = new loginPage(driver_android, mobileproperties);
 		login.usuario().sendKeys(username);
 		login.password().sendKeys(passwd);
-		login.inicio_sesion().click();;
+		login.inicio_sesion().click();
 		
 		Duration timeout = Duration.ofSeconds(30);
-		WebElement con_1 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.idioma_seleccion());
-		WebElement con_2 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.idioma_eng());
-		WebElement con_3 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.idioma_esp());
-		WebElement con_4 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.idioma_siguiente());
-//		
-		String t1 = con_1.getText();
-		String t2 = con_2.getText();
-		String t3 = con_3.getText();
-		String t4 = con_4.getText();
+		String t1 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.idioma_seleccion()).getText();
+		String t2 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.idioma_eng()).getText();
+		String t3 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.idioma_esp()).getText();
+		String t4 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.idioma_siguiente()).getText();
 		
 		List<String> st = Arrays.asList(t1,t2,t3,t4);
 		
@@ -286,9 +273,17 @@ public class LoginPageTestCases extends Base{
 			else {
 				System.out.println(i + " -> FAIL");
 				tc1.log(LogStatus.FAIL, mesg );
-				result = false;
 			}
 			c++;
+		}
+		
+		Boolean sel = ElementUtils.waitForElement(driver_android, timeout, driver -> login.idioma_seleccion()).isDisplayed();
+		
+		if (sel) {
+			tc1.log(LogStatus.PASS, "'Spanish' language selected by default." );
+		}
+		else {
+			tc1.log(LogStatus.FAIL, "'Spanish' language NOT selected by default." );
 		}
 		
 		screenshotCapture.takeScreenshotMob(driver_android, pathPicture);
@@ -296,6 +291,60 @@ public class LoginPageTestCases extends Base{
 		rep.endTest(tc1);
 		rep.flush();
 		
-		
 	}
+	
+	@Test(groups = {"mobile"})
+	public void selecControl() throws IOException {
+		
+		//  LoginPage: This test case verifies some strings in "Control menu" and "Adultos" selected by default.
+		
+			String testCaseName = "LoginMenu__Control_Parental";
+			String pathPicture = "C:\\Users\\bermudez\\OneDrive - Kudelski Group\\Documents\\MOB_demo\\"+testCaseName+".jpg";
+			
+			ExtentReports rep = reportCapture.handleReportMob();
+			ExtentTest tc1 = rep.startTest(testCaseName);
+			
+			String list = mobileproperties.getProperty("list_string_control");
+			String[] expectedString = list.split(";");
+			
+			loginPage login = new loginPage(driver_android, mobileproperties);
+			login.usuario().sendKeys(username);
+			login.password().sendKeys(passwd);
+			login.inicio_sesion().click();
+			
+			Duration timeout = Duration.ofSeconds(30);
+			ElementUtils.waitForElement(driver_android, timeout, driver -> login.idioma_siguiente()).click();
+			
+			Duration timeout_2 = Duration.ofSeconds(3);
+			String t1 = ElementUtils.waitForElement(driver_android, timeout_2, driver -> login.control_omitir()).getText();
+			String t2 = ElementUtils.waitForElement(driver_android, timeout_2, driver -> login.control_configure()).getText();
+			String t3 = ElementUtils.waitForElement(driver_android, timeout_2, driver -> login.control_habilitar()).getText();
+			String t4 = ElementUtils.waitForElement(driver_android, timeout_2, driver -> login.control_idioma()).getText();
+			String t5 = ElementUtils.waitForElement(driver_android, timeout_2, driver -> login.control_permitido()).getText();
+			String t6 = ElementUtils.waitForElement(driver_android, timeout_2, driver -> login.control_adultos()).getText(); 
+//			
+			List<String> st = Arrays.asList(t1,t2,t3,t4,t5,t6);
+			
+			Integer c = 0;
+			
+			for (String i : st) {
+				String mesg = "[Expected] :: " + expectedString[c] + " --> " + i + " :: [Received]" ;
+				if (i.equals(expectedString[c])) {
+					System.out.println(i + " -> OK");
+					tc1.log(LogStatus.PASS, mesg );
+				}
+				else {
+					System.out.println(i + " -> FAIL");
+					tc1.log(LogStatus.FAIL, mesg );
+				}
+				c++;
+			}
+
+			screenshotCapture.takeScreenshotMob(driver_android, pathPicture);
+			
+			rep.endTest(tc1);
+			rep.flush();
+	}
+	
+	
 }

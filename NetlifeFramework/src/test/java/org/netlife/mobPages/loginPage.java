@@ -76,15 +76,36 @@ public class loginPage {
 		return driver.findElement(By.xpath(pr.getProperty("idioma_esp")));
 	}
 	
-	@SuppressWarnings("deprecation")
-	public WebElement idioma_esp_2() {
-		return driver.findElement(MobileBy.AndroidUIAutomator("idioma_esp_3"));	
+	public WebElement idioma_esp_sel() {
+		return driver.findElement(By.xpath(pr.getProperty("idioma_esp_sel")));
 	}
 	
 	public WebElement idioma_siguiente() {
 		return driver.findElement(By.xpath(pr.getProperty("idioma_siguiente")));
 	}
 	
+	public WebElement control_idioma() {
+		return driver.findElement(By.xpath(pr.getProperty("control_idioma")));
+	}
 	
+	public WebElement control_configure() {
+		return driver.findElement(By.xpath(pr.getProperty("control_configure")));
+	}
+	
+	public WebElement control_habilitar() {
+		return driver.findElement(By.xpath(pr.getProperty("control_habilitar")));
+	}
+	
+	public WebElement control_permitido() {
+		return driver.findElement(By.xpath(pr.getProperty("control_permitido")));
+	}
+	
+	public WebElement control_omitir() {
+		return driver.findElement(By.xpath(pr.getProperty("control_omitir")));
+	}
+	
+	public WebElement control_adultos() {
+		return driver.findElement(By.xpath(pr.getProperty("control_adultos")));
+	}
 	
 }
