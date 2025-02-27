@@ -1,5 +1,6 @@
 package org.netlife.mobPages;
 
+import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
@@ -40,11 +41,7 @@ public class mainMenuPage {
 		return driver.findElement(By.xpath(pr.getProperty("inicio_strip_0")));
 	}
 	
-	public WebElement inicio_strip_3() {
-		return driver.findElement(By.xpath(pr.getProperty("inicio_strip_3")));
-	}
-	
-	
+	/////////////////////////////////////////////////////////////////////////////////
 	
 	public WebElement main_inicio() {
 		return driver.findElement(By.xpath(pr.getProperty("main_inicio")));
@@ -74,8 +71,27 @@ public class mainMenuPage {
 		return driver.findElement(By.xpath(pr.getProperty("main_config_icon")));
 	}
 
+	/////////////////////////////////////////////////////////////////////////////////
 	
+	public WebElement config_config() {
+		return driver.findElement(By.xpath(pr.getProperty("config_config")));
+	}
 	
+	public WebElement config_back_button() {
+		return driver.findElement(By.xpath(pr.getProperty("config_back_button")));
+	}
+	
+	public WebElement config_config_general_button() {
+		return driver.findElement(By.xpath(pr.getProperty("config_config_general_button")));
+	}
+	
+	public WebElement config_guia_button() {
+		return driver.findElement(By.xpath(pr.getProperty("config_guia_button")));
+	}
+	
+	public List<WebElement> config_all_options(){
+		return  driver.findElements(AppiumBy.androidUIAutomator(pr.getProperty("config_resource_id")));
+	}
 	
 	
 }

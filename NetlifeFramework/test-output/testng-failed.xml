@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="org.netlife.mobTestScripts.MainPageTestCases">
+      <class name="org.netlife.mobTestScripts.ConfigPageTestCases">
         <methods>
           <include name="appLaunch"/>
           <include name="appClose"/>
-          <include name="inicioScrolling"/>
+          <include name="configMenu"/>
         </methods>
-      </class> <!-- org.netlife.mobTestScripts.MainPageTestCases -->
+      </class> <!-- org.netlife.mobTestScripts.ConfigPageTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
