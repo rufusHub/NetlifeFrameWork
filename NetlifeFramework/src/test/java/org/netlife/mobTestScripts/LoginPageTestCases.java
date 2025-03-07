@@ -37,13 +37,20 @@ public class LoginPageTestCases extends Base{
 			String[] expectedString = list.split(";");
 			
 			loginPage login = new loginPage(driver_android, mobileproperties);
-			String t1 = login.usuario().getText();
-			String t2 = login.password().getText();
-			String t3 = login.inicio_sesion().getText();
-			String t4 = login.olvido_pass().getText();
-			String t5 = login.terminos_politicas().getText();
+			Duration timeout = Duration.ofSeconds(2);
+			String t1 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.usuario()).getText();
+			String t2 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.password()).getText();
+			String t3 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.inicio_sesion()).getText();
+			String t4 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.olvido_pass()).getText();
+			String t5 = ElementUtils.waitForElement(driver_android, timeout, driver -> login.terminos_politicas()).getText();
+			
 			
 			List<String> st = Arrays.asList(t1,t2,t3,t4,t5);
+			
+		    // Check if the number of options matches the number of expected strings
+		    if (st.size() != expectedString.length) {
+		        throw new Exception("The number of options does not match the number of expected strings.");
+		    }
 			
 			Integer c = 0;
 			
@@ -62,9 +69,10 @@ public class LoginPageTestCases extends Base{
 			}
 		
 		} catch(Exception e) {
-			String msn = "THE TEST \"" + testCaseName + "\" DID NOT EXCECUTE!";
+			String msn = testCaseName + " GOT A CRITICAL ERROR, REVIEW ASAP!";
 			System.out.println(msn);
 			tc1.log(LogStatus.FATAL, msn );
+			e.printStackTrace();
 		}
 		//Assertion.assertion_2(result, testCaseName);
 			
@@ -92,7 +100,7 @@ public class LoginPageTestCases extends Base{
 			loginPage login = new loginPage(driver_android, mobileproperties);
 			login.usuario().sendKeys(username);
 			login.password().sendKeys(passwd);
-			login.inicio_sesion().click();;
+			login.inicio_sesion().click();
 			
 			Duration timeout = Duration.ofSeconds(30);
 			WebElement con = ElementUtils.waitForElement(driver_android, timeout, driver -> login.idioma_seleccion());
@@ -106,7 +114,7 @@ public class LoginPageTestCases extends Base{
 			}
 		
 		} catch(Exception e) {
-			String msn = "THE TEST \"" + testCaseName + "\" DID NOT EXCECUTE!";
+			String msn = testCaseName + " GOT A CRITICAL ERROR, REVIEW ASAP!";
 			System.out.println(msn);
 			tc1.log(LogStatus.FATAL, msn );
 		}
@@ -151,7 +159,7 @@ public class LoginPageTestCases extends Base{
 			}
 		
 		}  catch(Exception e) {
-			String msn = "THE TEST \"" + testCaseName + "\" DID NOT EXCECUTE!";
+			String msn = testCaseName + " GOT A CRITICAL ERROR, REVIEW ASAP!";
 			System.out.println(msn);
 			tc1.log(LogStatus.FATAL, msn );
 		}
@@ -208,7 +216,7 @@ public class LoginPageTestCases extends Base{
 			}
 		
 		}  catch(Exception e) {
-			String msn = "THE TEST \"" + testCaseName + "\" DID NOT EXCECUTE!";
+			String msn = testCaseName + " GOT A CRITICAL ERROR, REVIEW ASAP!";
 			System.out.println(msn);
 			tc1.log(LogStatus.FATAL, msn );
 		}
@@ -265,7 +273,7 @@ public class LoginPageTestCases extends Base{
 			}
 		
 		}  catch(Exception e) {
-			String msn = "THE TEST \"" + testCaseName + "\" DID NOT EXCECUTE!";
+			String msn = testCaseName + " GOT A CRITICAL ERROR, REVIEW ASAP!";
 			System.out.println(msn);
 			tc1.log(LogStatus.FATAL, msn );
 		}
@@ -303,6 +311,12 @@ public class LoginPageTestCases extends Base{
 			
 			List<String> st = Arrays.asList(t1,t2,t3,t4);
 			
+		    // Check if the number of options matches the number of expected strings
+		    if (st.size() != expectedString.length) {
+		        throw new Exception("The number of options does not match the number of expected strings.");
+		    }
+			
+			
 			Integer c = 0;
 			
 			for (String i : st) {
@@ -328,9 +342,10 @@ public class LoginPageTestCases extends Base{
 			}
 		
 		} catch(Exception e) {
-			String msn = "THE TEST \"" + testCaseName + "\" DID NOT EXCECUTE!";
+			String msn = testCaseName + " GOT A CRITICAL ERROR, REVIEW ASAP!";
 			System.out.println(msn);
 			tc1.log(LogStatus.FATAL, msn );
+			e.printStackTrace();
 		}
 		
 		screenshotCapture.takeScreenshotMob(driver_android, pathPicture);
@@ -374,6 +389,11 @@ public class LoginPageTestCases extends Base{
 	//			
 				List<String> st = Arrays.asList(t1,t2,t3,t4,t5,t6);
 				
+			    // Check if the number of options matches the number of expected strings
+			    if (st.size() != expectedString.length) {
+			        throw new Exception("The number of options does not match the number of expected strings.");
+			    }
+				
 				Integer c = 0;
 				
 				for (String i : st) {
@@ -390,9 +410,10 @@ public class LoginPageTestCases extends Base{
 				}
 			
 			} catch(Exception e) {
-				String msn = "THE TEST \"" + testCaseName + "\" DID NOT EXCECUTE!";
+				String msn = testCaseName + " GOT A CRITICAL ERROR, REVIEW ASAP!";
 				System.out.println(msn);
 				tc1.log(LogStatus.FATAL, msn );
+				e.printStackTrace();
 			}
 			
 			screenshotCapture.takeScreenshotMob(driver_android, pathPicture);

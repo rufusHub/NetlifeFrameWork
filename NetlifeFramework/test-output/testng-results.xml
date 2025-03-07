@@ -2,27 +2,27 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-27T21:20:34Z" name="Default suite" finished-at="2025-02-27T21:21:00Z" duration-ms="26277">
+  <suite started-at="2025-03-07T22:48:55Z" name="Default suite" finished-at="2025-03-07T22:52:06Z" duration-ms="191523">
     <groups>
       <group name="mobile">
-        <method signature="ConfigPageTestCases.configMenu()[pri:0, instance:org.netlife.mobTestScripts.ConfigPageTestCases@8576fa0]" name="configMenu" class="org.netlife.mobTestScripts.ConfigPageTestCases"/>
+        <method signature="InicioPageTestCases.inicioScrolling()[pri:0, instance:org.netlife.mobTestScripts.InicioPageTestCases@78d6692f]" name="inicioScrolling" class="org.netlife.mobTestScripts.InicioPageTestCases"/>
       </group> <!-- mobile -->
     </groups>
-    <test started-at="2025-02-27T21:20:34Z" name="Default test" finished-at="2025-02-27T21:21:00Z" duration-ms="26277">
-      <class name="org.netlife.mobTestScripts.ConfigPageTestCases">
-        <test-method is-config="true" signature="appLaunch()[pri:0, instance:org.netlife.mobTestScripts.ConfigPageTestCases@8576fa0]" started-at="2025-02-27T16:20:34Z" name="appLaunch" finished-at="2025-02-27T16:20:52Z" duration-ms="18063" status="PASS">
+    <test started-at="2025-03-07T22:48:55Z" name="Default test" finished-at="2025-03-07T22:52:06Z" duration-ms="191523">
+      <class name="org.netlife.mobTestScripts.InicioPageTestCases">
+        <test-method is-config="true" signature="appLaunch()[pri:0, instance:org.netlife.mobTestScripts.InicioPageTestCases@78d6692f]" started-at="2025-03-07T17:48:55Z" name="appLaunch" finished-at="2025-03-07T17:49:08Z" duration-ms="12961" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- appLaunch -->
-        <test-method signature="configMenu()[pri:0, instance:org.netlife.mobTestScripts.ConfigPageTestCases@8576fa0]" started-at="2025-02-27T16:20:52Z" name="configMenu" finished-at="2025-02-27T16:20:54Z" duration-ms="2694" status="PASS">
+        <test-method signature="inicioScrolling()[pri:0, instance:org.netlife.mobTestScripts.InicioPageTestCases@78d6692f]" started-at="2025-03-07T17:49:08Z" name="inicioScrolling" finished-at="2025-03-07T17:52:01Z" duration-ms="173313" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- configMenu -->
-        <test-method is-config="true" signature="appClose()[pri:0, instance:org.netlife.mobTestScripts.ConfigPageTestCases@8576fa0]" started-at="2025-02-27T16:20:54Z" name="appClose" finished-at="2025-02-27T16:21:00Z" duration-ms="5488" status="PASS">
+        </test-method> <!-- inicioScrolling -->
+        <test-method is-config="true" signature="appClose()[pri:0, instance:org.netlife.mobTestScripts.InicioPageTestCases@78d6692f]" started-at="2025-03-07T17:52:01Z" name="appClose" finished-at="2025-03-07T17:52:06Z" duration-ms="5238" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- appClose -->
-      </class> <!-- org.netlife.mobTestScripts.ConfigPageTestCases -->
+      </class> <!-- org.netlife.mobTestScripts.InicioPageTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -28,6 +28,7 @@ public class ElementUtils {
         } catch (TimeoutException e) {
             // Handle the case where the element is not found
             System.out.println("Element not found within the timeout period.");
+            e.printStackTrace();
         }
 
         return element;

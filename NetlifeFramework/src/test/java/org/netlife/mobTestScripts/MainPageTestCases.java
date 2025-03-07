@@ -64,6 +64,11 @@ public class MainPageTestCases extends Base{
 				
 				Integer c = 0;
 				
+			    // Check if the number of options matches the number of expected strings
+			    if (st.size() != expectedString.length) {
+			        throw new Exception("The number of options does not match the number of expected strings.");
+			    }
+				
 				for (String i : st) {
 					String mesg = "[Expected] :: " + expectedString[c] + " --> " + i + " :: [Received]" ;
 					if (i.equals(expectedString[c])) {
@@ -81,6 +86,7 @@ public class MainPageTestCases extends Base{
 				String msn = "THE TEST \"" + testCaseName + "\" DID NOT EXCECUTE!";
 				System.out.println(msn);
 				tc1.log(LogStatus.FATAL, msn );
+				e.printStackTrace();
 			}
 				
 			screenshotCapture.takeScreenshotMob(driver_android, pathPicture);

@@ -93,5 +93,16 @@ public class mainMenuPage {
 		return  driver.findElements(AppiumBy.androidUIAutomator(pr.getProperty("config_resource_id")));
 	}
 	
+	/////////////////////////////////////////////////////////////////////////////////
+	
+	public WebElement config_gnrl_gnrl() {
+		return driver.findElement(By.xpath(pr.getProperty("config_gnrl_gnrl")));
+	}
+	
+	public List<WebElement> config_gnrl_resource_id(){
+		return  driver.findElements(AppiumBy.androidUIAutomator(pr.getProperty("config_gnrl_resource_id")));
+	}
+	
+	
 	
 }

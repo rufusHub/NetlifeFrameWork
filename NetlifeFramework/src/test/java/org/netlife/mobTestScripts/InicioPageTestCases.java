@@ -80,6 +80,7 @@ public class InicioPageTestCases extends Base{
 			String msn = "THE TEST \"" + testCaseName + "\" DID NOT EXCECUTE!";
 			System.out.println(msn);
 			tc1.log(LogStatus.FATAL, msn );
+			e.printStackTrace();
 		}
 		screenshotCapture.takeScreenshotMob(driver_android, pathPicture);
 		

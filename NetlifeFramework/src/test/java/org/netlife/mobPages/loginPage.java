@@ -20,6 +20,12 @@ public class loginPage {
 		this.pr = pr;
 	}
 	
+	public WebElement fail() {
+		return driver.findElement(By.xpath(pr.getProperty("fail")));
+	}
+	
+	////////////////////////////////////////////////////////////////////////
+	
 	public WebElement usuario() {
 		return driver.findElement(By.xpath(pr.getProperty("usuario")));
 	}
@@ -44,6 +50,8 @@ public class loginPage {
 		return driver.findElement(By.xpath(pr.getProperty("sign_error")));
 	}
 	
+////////////////////////////////////////////////////////////////////////
+	
 	public WebElement rest_contra_msg_2() {
 		return driver.findElement(By.xpath(pr.getProperty("rest_contra_2")));
 	}
@@ -51,6 +59,9 @@ public class loginPage {
 	public WebElement rest_contra_ok() {
 		return driver.findElement(By.xpath(pr.getProperty("rest_contra_ok")));
 	}
+	
+	
+////////////////////////////////////////////////////////////////////////
 	
 	public WebElement term_politica_msg_1() {
 		return driver.findElement(By.xpath(pr.getProperty("term_politica_1")));
@@ -63,6 +74,8 @@ public class loginPage {
 	public WebElement term_politica_ok() {
 		return driver.findElement(By.xpath(pr.getProperty("term_politica_ok")));
 	}
+	
+////////////////////////////////////////////////////////////////////////
 	
 	public WebElement idioma_seleccion() {
 		return driver.findElement(By.xpath(pr.getProperty("idioma_seleccion")));
@@ -83,6 +96,8 @@ public class loginPage {
 	public WebElement idioma_siguiente() {
 		return driver.findElement(By.xpath(pr.getProperty("idioma_siguiente")));
 	}
+	
+////////////////////////////////////////////////////////////////////////
 	
 	public WebElement control_idioma() {
 		return driver.findElement(By.xpath(pr.getProperty("control_idioma")));
