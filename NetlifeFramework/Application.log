@@ -218,3 +218,5 @@
 2025-02-20 10:45:41  [Loginscreen_getText] (main:) Assertion is getting failed
 2025-02-20 11:10:49  [Loginscreen_getText] (main:) Assertion is getting failed
 2025-02-20 17:29:15  [Loginscreen_getText] (main:) Assertion is getting failed
+2025-03-07 19:30:54  [TC1] (main:) Assertion is getting passed
+2025-03-07 19:31:08  [TC1] (main:) Assertion is getting failed

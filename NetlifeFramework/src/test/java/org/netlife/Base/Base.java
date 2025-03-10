@@ -50,7 +50,11 @@ public class Base {
 	String deviceName = "R5CRA26RMNY";		//"R5CRA26RMNY" "L4SDU17907000554"
 	
 	
-	//@BeforeMethod(alwaysRun = true, groups = {"web"})
+	
+	
+	
+	
+	@BeforeMethod(alwaysRun = true, groups = {"web"})
 	public void BrowserLaunch() throws IOException {
 		// Load WEB properties.
 		File f = new File(this.propPathweb);
@@ -68,15 +72,19 @@ public class Base {
 	}
 	
 	
-	//@AfterMethod(alwaysRun = true, groups = {"web"})
+	@AfterMethod(alwaysRun = true, groups = {"web"})
 	public void BrowserClose() throws InterruptedException {
 		Thread.sleep(2000);
 		driver_chrome.quit();
 	}
 	
 	
+	
+	
+	
+	
 	@SuppressWarnings("deprecation")
-	@BeforeMethod(alwaysRun = true, groups = {"mobile"})
+//	@BeforeMethod(alwaysRun = true, groups = {"mobile"})
 	public void appLaunch() throws IOException {
 		
 //		// Load mobile properties.
@@ -127,7 +135,7 @@ public class Base {
 	
 	
 	@SuppressWarnings("deprecation")
-	@AfterMethod(alwaysRun = true, groups = {"mobile"})
+//	@AfterMethod(alwaysRun = true, groups = {"mobile"})
 	public void appClose() throws InterruptedException {
 		Thread.sleep(5000);
 		driver_android.closeApp();
